@@ -1,5 +1,5 @@
 # Problem 13
-# Find the sum of the fifty  100-digit numbers.
+# Find the sum of the fifty 100-digit numbers.
 
 require 'euler.rb'
 

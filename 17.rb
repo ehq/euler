@@ -1,4 +1,6 @@
 # Problem 17
+# How many letters would be needed to write all the numbers in words from 1 to 1000?
+# FIXME this solution kind of sucks.
 
 numbers = <<-EOS
  One2Two3 Three4Four5 Five6Six7Seven8Eight9 Nine10Ten11Eleven12Twelve13Thirteen14Fourteen15 Fifteen16Sixteen17 Seventeen18 Eighteen19Nineteen20Twenty21Twenty-one22 Twenty-two23Twenty-three24Twenty-four25 Twenty-five26 Twenty-six27Twenty-seven28Twenty-eight29Twenty-nine30Thirty31 Thirty-one32Thirty-two33Thirty-three34 Thirty-four35Thirty-five36Thirty-six37Thirty-seven38Thirty-eight39 Thirty-nine40Forty41 Forty-one42 Forty-two43Forty-three44 Forty-four

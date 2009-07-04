@@ -1,4 +1,7 @@
 # Problem 18
+# Find the maximum sum travelling from the top of the triangle to the base.
+
+require 'euler.rb'
 
 str = <<-EOS
 75
@@ -18,7 +21,7 @@ str = <<-EOS
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 EOS
 
-t = str.split("\n").collect! {|e| e.split(' ').collect {|n| n.to_i}}
+triangle = str.split("\n").collect! {|e| e.split(' ').collect {|n| n.to_i}}
 
 def max(a,b)
   a > b ? a : b
@@ -29,4 +32,4 @@ def biggest_sum(triangle, i, j)
   max(triangle[i][j] + biggest_sum(triangle, i+1, j), triangle[i][j] + biggest_sum(triangle, i+1, j+1))
 end
 
-p biggest_sum(t,0,0)
+p biggest_sum(triangle,0,0)

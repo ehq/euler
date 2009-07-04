@@ -1,4 +1,6 @@
 # Problem 11
+# What is the greatest product of four adjacent numbers in any direction
+# (up, down, left, right, or diagonally) in the 20×20 grid?
 
 grid = <<-EOS
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -29,42 +31,6 @@ end
 
 raw_splitted_grid = grid.gsub("\n", " ").split(" ").collect! {|elem| elem.to_i}
 
-# Check horizontally
-result = 1
-while n = raw_splitted_grid.shift
-  consecutives_product = n * raw_splitted_grid[0..2].product
-  result = consecutives_product if result < consecutives_product
-end
-p result
-
-result = 1
-
-# Check diagonally
-17.times do |i|
-  17.times do |j|
-    aux_result = 1
-    4.times {|k| aux_result *= splitted_grid[i+k][j+k]}
-    result = aux_result if result < aux_result
-  end
-end
-
-p result
-
-# Check up and down
-result = 1
-
-17.times do |i|
-  17.times do |j|
-    aux_result = 1
-    4.times {|k| aux_result *= splitted_grid[i+k][j]}
-    result = aux_result if result < aux_result
-  end
-end
-
-p result
-
-# Damn it. Check the other diagonal.
-
 result = 1
 
 17.times do |i|
@@ -75,4 +41,4 @@ result = 1
   end
 end
 
-p result # There you go.
+p result

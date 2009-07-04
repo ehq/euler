@@ -1,3 +1,6 @@
 # Problem 20
+# Find the sum of digits in 100!
 
-p fact(100).to_s.split('').collect! {|num| num.to_i}.sum
+require 'euler.rb'
+
+p 100.fact.to_s.split('').collect! {|num| num.to_i}.sum

@@ -1,4 +1,5 @@
 # Problem 27
+# Find a quadratic formula that produces the maximum number of primes for consecutive values of n.
 
 require 'euler.rb'
 
@@ -21,4 +22,3 @@ for a in range
 end
 
 p result
-
