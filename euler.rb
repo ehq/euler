@@ -23,7 +23,7 @@ class Integer
   end
 
   def sum_of_divisors
-    (1..(self/2)+1).inject {|sum, i| modulo(i) == 0 ? sum + i : sum}
+    (1..(self/2)+1).inject {|sum, i| divisible_by(i) ? sum + i : sum}
   end
 
   def fact
