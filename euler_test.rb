@@ -60,6 +60,21 @@ class EulerTest < Test::Unit::TestCase
     end
   end
 
+  context "Array" do
+    should "respond to sum" do
+      assert_equal 21, [1, 2, 3, 4 ,5, 6].sum
+    end
+
+    should "respond to product" do
+      assert_equal 20, [1, 2, 5, 2].prod
+      assert_equal 0, [1, 2, 4, 56, 8, 0].prod
+      assert_equal 1, [1, 1].prod
+    end
+
+    should "rotate the elements to the right when sent rotate_right" do
+      assert_equal [6, 1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6].rotate_right
+    end
+  end
 
   context "Fibonacci sequence" do
     should "follow the right pattern" do
@@ -68,5 +83,6 @@ class EulerTest < Test::Unit::TestCase
       assert_equal 13, fibonacci(7)
     end
   end
+
 end
 

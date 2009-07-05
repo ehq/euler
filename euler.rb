@@ -102,6 +102,7 @@ class Array
   end
 end
 
+
 class String
   def alphabet_value
     sum = 0
